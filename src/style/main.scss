@@ -1,0 +1,103 @@
+$header-font: 'Righteous', cursive;
+$body-font: 'Comfortaa', cursive;
+$main-color: darkslategrey;
+$txt-color-light: lightgrey;
+$txt-color-dark: #212529;
+$radius: 5px;
+
+html {
+    font-size: 62.5%; // 1rem is 10px
+}
+
+body {
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    width: 90vw;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 10px;
+    margin: 15px 0px;
+    align-items: center;
+    background-color: rgba($color: #8a8a8a, $alpha: 0.30);
+    border-radius: $radius;
+
+    .main-header {
+        padding: 2px;
+
+        h1 {
+            font-family: $header-font;
+            font-size: 3em;
+            color: $txt-color-light;
+        }
+        
+    }
+
+    .sub-header {
+        border-top: 1px solid $txt-color-dark;
+        padding: 7px;
+
+        h2 {
+            font-family: $body-font;
+            color: $txt-color-light;
+        }
+        
+    }
+}
+
+.container-drag {
+    display: flex;
+    justify-content: space-around;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75vh;
+    align-items: center;
+    border-radius: $radius;
+
+    .droppable {
+        width: 31%;
+        background-color: rgba($color: #8a8a8a, $alpha: 0.65);
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px 10px;
+        border-radius: $radius;
+
+        .task-header {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            margin: 5px;
+            width: 80%;
+            border-bottom: 1px solid $txt-color-dark;
+            font-family: $header-font;
+        }
+
+        .draggable {
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            margin: 5px;
+            font-weight: 700;
+            height: 25px;
+            width: 90%;
+            font-family: $body-font;
+            border-radius: $radius;
+        }
+    }
+}
+
+
+
+
+
