@@ -4,7 +4,6 @@ export default class Category extends Component {
     constructor(props) {
         super(props);
 
-        //Changed from original
         this.state = {
             catName: "",
             catTitle: "",
