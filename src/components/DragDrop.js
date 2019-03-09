@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import Category from "./Category";
 import image from '../../static/assets/images/mountain.jpg';
 
 export default class DragDrop extends Component {
@@ -29,12 +28,10 @@ export default class DragDrop extends Component {
         ev.dataTransfer.setData("name", name);
     }
 
-// Copied to Category.js
     onDragOver = (ev) => {
         ev.preventDefault();
     }
 
-// Copied to Category.js
     onDrop = (ev, cat) => {
         let name = ev.dataTransfer.getData("name");
 
@@ -72,7 +69,7 @@ export default class DragDrop extends Component {
         return (
             <div className="container-drag" style={{ backgroundImage: "url(" + image + ")" }}>
 
-                {/* <div className="droppable toDo" onDragOver={(e) => this.onDragOver(e)} onDrop={(e) => {this.onDrop(e, "toDo")}}>
+                <div className="droppable toDo" onDragOver={(e) => this.onDragOver(e)} onDrop={(e) => {this.onDrop(e, "toDo")}}>
                     <span className="task-header">
                         <h3>To Do</h3>
                     </span>
@@ -91,27 +88,7 @@ export default class DragDrop extends Component {
                         <h3>Completed</h3>
                     </span>
                     {tasks.completed}
-                </div>  */}
-
-                <Category 
-                    catName="drawingBoard" 
-                    catTitle="Drawing Board"
-                 />
-
-                <Category 
-                    catName="toDo" 
-                    catTitle="To Do"
-                />
-
-                <Category 
-                    catName="currentProjects" 
-                    catTitle="Current Projects"
-                />
-
-                <Category 
-                    catName="completed" 
-                    catTitle="Completed"
-                /> 
+                </div> 
 
             </div>
         );
